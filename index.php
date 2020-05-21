@@ -1,8 +1,5 @@
 <?php
-    echo "Olá Mundo";
-
-	echo "Agora o bicho vai pegar";
-
+    $title = "Curso Completo de PHP 7";
 ?>
 <html>
 	<head>
@@ -10,6 +7,6 @@
 	</head>
 	
 	<body>
-		<h1>Curso de PHP 7</h1>
+		<h1>Curso Completo de PHP 7</h1>
 	</body>
 </html>
