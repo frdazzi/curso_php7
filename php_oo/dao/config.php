@@ -1,5 +1,5 @@
 <?php
-    // Definicao de Variaveis
+    // Definicao de Constantes
     define("DBDSN","mysql:host=localhost;dbname=dbphp7");
     define("DBUSER","root");
     define("DBPASS","");
