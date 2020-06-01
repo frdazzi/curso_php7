@@ -1,15 +1,15 @@
 <?php
     require_once("config.php");
 
-    $filename = "uso_class_files.txt";
-    $type     = "r";
+    $filename = "uso_class_file.txt";
+    $type     = "w+";
     $destino  = "folder_01".DIRECTORY_SEPARATOR.$filename;
 
     // Cria um arquivo
-    //$file = new File($filename,$type);
+    $file = new File($filename,$type);
 
     // Escreve algo no arquivo
-    //$file->write("Alguma coisa");
+    $file->write("Alguma coisa");
 
     // Le o conteudo de um arquivo e retorna como array de linhas do arquivo
     // if ($arquivo = $file->read()) {
@@ -17,7 +17,7 @@
     // }
 
     // Fecha o arquivo
-    //$file->close();
+    $file->close();
 
 
 

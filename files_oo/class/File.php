@@ -38,17 +38,29 @@
             $this->filename = $filename;
             $this->type = $type;
 
-            $this->file = fopen($filename,$type);
+            $types = array('r','r+');
+
+            if (in_array($this->type, $types)) {
+                if (file_exists($filename))
+                    $this->file = fopen($filename,$type);
+                else
+                    return false;
+            } else
+                $this->file = fopen($filename,$type);
         }
 
         public function close() {
-            fclose($this->file);
+            if ($this->file)
+                fclose($this->file);
+            else
+                return false;
         }
 
         public function write($conteudo) {
-            if ($conteudo!='') {
+            if ($conteudo!='' && $this->file) {
                 fwrite($this->file, $conteudo);
-            }
+            } else
+                return false;
         }
 
         // Tenta realizar a leitura do arquivo
@@ -60,13 +72,17 @@
 
             if (in_array($this->type, $types)) {
                 $data = array();
-                while($linha = fgets($this->file)){
-                    $data[] = $linha;
-                }
-                if (count($data)==0)
+
+                if ($this->file) {
+                    while($linha = fgets($this->file)){
+                        $data[] = $linha;
+                    }
+                    if (count($data)==0)
+                        return false;
+                    else
+                        return $data;
+                } else
                     return false;
-                else
-                    return $data;
 
             } else {
                 return false;
