@@ -1,0 +1,8 @@
+Composer
+========
+O composer é um utilitário para gerenciar dependências de
+projetos de várias linguagens de programação.
+
+Se por exemplo você utiliza em um projeto uma biblioteca que
+te ajuda a agilizar alguma funcionalidade, você pode utilizar
+o composer para baixar essas dependências de forma automática.
