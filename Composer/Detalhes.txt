@@ -6,3 +6,44 @@ projetos de várias linguagens de programação.
 Se por exemplo você utiliza em um projeto uma biblioteca que
 te ajuda a agilizar alguma funcionalidade, você pode utilizar
 o composer para baixar essas dependências de forma automática.
+
+Instalação
+==========
+1. Entra no site do Composer em getcomposer.org/downloads e baixa
+   o Composer;
+2. Instala normalmente o Composer no computador
+3. Para verificar se ele foi devidamente instalado, entra no
+   Prompt de comando do Windows e digita "composer -V". Se aparecer
+   a versão do Composer instalado é porque está tudo ok.
+
+Comandos
+========
+Existem duas maneiras de usar o composer:
+1. Utilizar o Composer para criar este arquivo.
+
+2. Criar um arquivo json composer.json com todas as informações do
+   projeto e suas dependências.
+
+
+1. Utilizando o Composer para criar um arquivo de configuração
+   abaixo, o símbolo "->" representa a linha de comando do DOS
+   ->composer init
+     Passo 1 - Identificação do Repositório
+     Você precisa inserir o vendor que representa você ou sua
+     empresa junto ao Composer
+     Vendor e name é o pacote (package) do seu projeto
+     Exemplo: frdazzi/sisacom
+     Passo 2 - Descrição Formal
+     Você coloca uma descrição formal do seu projeto
+     Passo 3 - Author
+     Nome e e-mail do autor do proojeto (coloca letra N para pular)
+     Passo 4 - Versão
+     Mínima versão estável do seu código.
+     vazio  -> caso não tenha uma versão específica estável
+     dev    -> versão para desenvolvimento
+     alfa   -> versão de validação 1
+     beta   -> versão de homologação
+     rc     -> release candidate, primeira versão que será lançada do código
+     stable -> versão estável do código. A próxima versão será uma melhoria
+               desta versão
+     
