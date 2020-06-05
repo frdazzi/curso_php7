@@ -44,6 +44,28 @@ Existem duas maneiras de usar o composer:
      alfa   -> versão de validação 1
      beta   -> versão de homologação
      rc     -> release candidate, primeira versão que será lançada do código
-     stable -> versão estável do código. A próxima versão será uma melhoria
+     stable -> versão estável do código. O próximo lanamento é uma melhoria
                desta versão
-     
+
+     Passo 5 - Tipo do pacote
+     Se é uma biblioteca, pacote, projeto, plugin
+     Passo 6 - Licença
+     OpenGL, GNU, Creative Comons (pode usar desde que diga quem é o autor)
+     Passo 7 - Dependências
+     São as bibliotecas que o projeto precisa (não precisa ser dfinida neste momento)
+     Passo 8 - Cofirma com yes
+
+2. Este arquivo pode ter sido riado manualmente json composer.json
+
+
+
+No arquivo json
+===============
+- Na cláusula requie, você coloca as bibliotecas que
+  deseja atribuir ao seu projeto
+  Exemplo:
+  "require": {
+        "monolog/monolog":"1.0.*"
+  }
+  Salva o arquivo e na linha de comando digita
+  ->compose update (pode usar install na primeira vez, mas pode usar sempre update)

@@ -1,0 +1,7 @@
+PHP-FIG
+=======
+O site https://www.php-fig.org/ traz boas práticas
+para desenvolvimento em PHP.
+- Forma de escrever
+- Forma de identar
+- Forma de comentar
