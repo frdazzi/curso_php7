@@ -1,0 +1,34 @@
+Slim Framework
+==============
+O Slim Framework é um micro framework para rotas. Organiza o
+trabalho com rotas e ajuda no SEO para rankiar sites nos sites
+de busca. O site terá muito mais acessos.
+
+A versão 2 é mais estável e fácil de usar.
+
+Site
+====
+http://www.slimframework.com/
+
+
+Projeto no github
+=================
+https://github.com/slimphp/Slim
+
+
+
+Para usar, basta baixar o projeto via composer
+1. Cria o arquivo composer.json
+2. Insere o require
+{
+    "require":{
+        "slim/slim":"2.0"
+    }
+}
+3. Copiar o arquivo vendor/slim/slim/.htaccess
+   para a raiz do projeto.
+
+4. O arquivo .htaccess é um arquivo do/para o Apache que configura
+   o mode rewrite para uso de URLs amigáveis.
+
+5.

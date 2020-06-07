@@ -1,0 +1,37 @@
+Virtual Host
+============
+Um diretório virtual (virtual host) permite que localmente na máquina,
+independente de SO, você possa digita meulocal.com.br e isso apontar para um
+diretório desse SO.
+Caso você tenha uma máquina hospedada no AWS por exemplo, você pode ter vários
+domínios nela.
+
+
+Para criar um diretório virtual no apache, faça:
+
+1. Abra o arquivo
+   C:\xampp\apache\conf\extra\httpd-vhosts.conf
+
+2. Insere essas informações
+<VirtualHost *:80>
+    ServerAdmin frdazzi@gmail.com
+    DocumentRoot "D:/Desenvolvimento/www/meulocal.com.br"
+    ServerName meulocal.com.br
+    ErrorLog "logs/meulocal.com.br.log"
+    CustomLog "logs/meulocal.com.br.log" common
+    <Directory "D:/Desenvolvimento/www/meulocal.com.br">
+        Order allow,deny
+        All from all
+        Require all granted
+    </Directory>
+</VirtualHost>
+
+3. Abra o arquivo
+   C:\Windows\System32\drivers\etc\hosts
+
+4. Insere essas informações
+127.0.0.1       	meulocal.com.br
+
+5. Pronto, quando digitar www.meulocal.com.br ou simplesmente
+   meulocal.com.br ele irá apontar para a pasta que foi informada
+   na tag "DocumentRoot".

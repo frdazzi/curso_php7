@@ -1,0 +1,30 @@
+Temapltes utilizando RainTPL
+============================
+Para utilizar o RainTPL gerenciador de templates, basta
+baixar suas dependênias no Composer
+
+1. Criar uma pasta e criar um arquivo composer.json
+   com o seguinte conteúdo
+    {
+        "require": {
+            "rain/raintpl": ">=3.0.0"
+        }
+    }
+
+2. Entra no "Git Bash Here" ou no "cdm" do windows na pasta
+   e digita ->composer install (omposer update também funcionad)
+
+3. No site do projeto no github temos um arquivo "example-simple.php"
+4. Copia esse código e cola em um arquivo qualquer .php
+5. Insere o autoload.php com require_once
+6. Cria as pastas "tpl_dir" e "cache_dir" com os nomes que quiser
+   no arquivo vem como exemplo  "templates/simple/", mas pode
+   alterar para qualquer nome. No meu exemplo eu criei "tpl/".
+7. Dentro da pasta "tpl/" criada, cria um arquivo com qualquer extensão
+   eu criei um com o nome index.html
+8. Nesse arquivo, coloca algum código HTML
+9. Digite no arquivo .php
+   ->$tpl = new Tpl;
+   ->$tpl->draw( "index" );
+   index e o nome do arquivo html criado
+10. Só usar agora.
